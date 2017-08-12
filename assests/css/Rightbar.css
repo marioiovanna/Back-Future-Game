@@ -1,0 +1,11 @@
+/* RIGHT BAR */
+.pmusic {
+    font-weight: bold;
+    font-family: "Roboto Condensed";
+    color:  #006400;
+    font-size: 30px;
+}
+
+#music {
+    width: 200px;
+}

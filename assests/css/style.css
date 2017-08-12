@@ -1,153 +1,35 @@
-    body {
-      background-image: url(../img/back4.png);
-      background-size: auto;
-      background-repeat: no-repeat;  
-    }
+body {
+    background-image: url(../img/back4.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+}
 
-    /* HEAD BAR */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-      height: 100px;
-      background-color: #000000;
-    }
+/* MAIN */
+.bt1 {
+    background-color: transparent;
+    border: none 0px;
+    margin-left: 35%;
+}
 
-    .navbar-brand {
-      height: 110px;
-      width: 250px;
-      position: absolute;
-    }
+.selecttext,
+.choosevs,
+.fight {
+    background-color: transparent;
+    border: none;
+    display: none;
+    font-weight: bold;
+    font-family: Comic Sans MS;
+    font-size: 30px;
+    color: #DAA520;
+    text-shadow: 3px 2px #000000;
+}
 
-    .car {
-      margin-left: 120px;
-      height: 80px;
-      width: 140px;
-      position: absolute;
-    }
-    
-    .fire {
-      height: 60px;
-      width: 60%;
-      position: relative;
-      margin: 45px 0 0 43.5%;
-      display: none;
-    }
-
-    .rayo {
-      width: 200px;
-      height: 100px;
-      margin: 0 0 0 89%;
-      display: none;
-      position: absolute;
-    }
-
-
-    /* LEFT BAR */
-    #life {
-      display: none;
-      margin: 130px 0 0 50px;
-      font-weight: bold;
-      font-family: Comic Sans MS;
-      font-size: 50px;
-      color: #DAA520;
-      text-shadow: 3px 3px  #000000;
-    }
-
-    .img-rounded {
-      margin: 10px 30px 10px 0;
-      height: 200px;
-      width: 250px;
-      border-color: #B8860B;
-      border-width: 5px;  
-      border-style: inset;
-     }
-
-     .pside {
-      display: none;
-      padding: 5px 180px 150px 10px;
-      margin-top: 10px;
-      position: absolute;
-      font-weight: bold;
-      font-family: Comic Sans MS;
-      font-size: 24px;
-      color: #DAA520;
-      text-shadow: 3px 3px  #000000;
-      background-color: transparent;
-      border: none;
-     }
-      
-
-      /* MAIN */
-     .bt1 {
-      background-color: transparent;
-      border: none 0px;  
-      margin-left: 35%;    
-     }
-
-     .fight {
-      display: none;
-      width: 300px;
-      height: 100px;
-     }
-
-      .select,
-      .choose,
-      .fight {
-      background-color: transparent;
-      border:none;
-      display: none;
-      font-weight: bold;
-      font-family: Comic Sans MS;
-      color: #DAA520;
-      text-shadow: 4px 2px #000000;
-     }
-
-     .selected{
-      height:300px;
-      width:300px;
-      border:1px solid green;
-    }
+.selected {
+    height: 300px;
+    width: 300px;
+    border: 1px solid green;
+}
     
 
-    /* RIGHT BAR */
-     .pmusic,
-     .link {
-      font-weight: bold;
-      font-family: Comic Sans MS;
-      color:  #006400;
-      text-shadow: 2px 2px #000000;
-      font-size: 30px;
-      }
 
-     #music {
-      width: 200px;
-     }
 
-     .guittar {
-      width: 215px;
-      height: 330px;
-      border: solid  #228B22 5px;
-      border-style: inset;     }
-
-     .almanac {
-      width: 215px;
-      height: 330px;
-      border: solid  #228B22 5px;
-      border-style: inset;
-     }
-    
-
-    /* FOOT ++ */
-    .row.content {height: 450px}
-    
-    .sidenav {
-      padding-top: 20px;
-      background-color:
-      height: 100%;
-    }
-    
-    footer {
-      background-color: #000000;
-      color: white;
-      padding: 15px;
-    }

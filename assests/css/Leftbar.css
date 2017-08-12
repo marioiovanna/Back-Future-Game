@@ -1,0 +1,37 @@
+/* LEFT BAR */
+.pside {
+    background-size: 250px 250px;
+    border-color: #B8860B;
+    border-width: 5px;
+    border-style: inset;
+    height: 220px;
+    width: 260px;
+}
+
+.biffbtn {
+    background-image: url("../img/biff2.png");
+}
+
+.docbtn {
+    background-image: url("../img/doc4.png");
+}
+
+.martinbtn {
+    background-image: url("../img/martin2.png");
+}
+
+.mcflybtn {
+    background-image: url("../img/mcfly.png");
+}
+
+.hiddentext {
+    display: none;
+    color: orange;
+    text-shadow: 3px 3px #0f0f0f;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+button:hover .hiddentext {
+    display: block;
+}

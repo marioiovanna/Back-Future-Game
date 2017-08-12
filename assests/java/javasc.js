@@ -1,45 +1,4 @@
 
-    // CAR ANIMATION navbar car animation ...
-    $(document).dblclick (function (){
-      $('.car').animate({left: '1800', opacity: '9'},'slow');
-      $('.fire').fadeIn (1000).delay(300).fadeOut(800);
-      $('.rayo').fadeIn (1700).fadeOut(500);
-      $('.car').click()
-         $('.car').animate({left: '-10%', opacity: '-15'});
-      });
-
-  // MAIN 
- $(document).ready (function() {
-      
-    // START GAME press button trigger this ...
-    $('.bt1').click (function() {
-        $('.select').fadeIn(3000);
-        $('.bt1').fadeOut(400);
-
-        // SHOW NAMES BUTTONS left bar ...
-        $('.pside').fadeIn(3000);
-
-    // SELECT PLAYER
-    //....doesnt work as wanted....
-    // var btp = ['Biff','Doc','Martin','McFly']
-
-    // var players = [
-    //   'assests/img/biff2.png',
-    //   'assests/img/doc4.png',
-    //   'assests/img/martin2.png',
-    //   'assests/img/mcfly.png',
-    // ]
-
-    // for (var i = 0; i < players.length; i++) {
-    // var playerBtn = $("<img>");
-
-    // playerBtn.addClass("img-rounded");
-    // playerBtn.attr("src", players[i]);
-
-    // $('.erase').append(playerBtn);
-    // };
-    
-
   // ON PLAYER  if choose one move IMG to main....
   $('.pside').on ('click',function() {
 
@@ -70,7 +29,7 @@ var mcflyhp = hitp[3];
 // console.log('player selected = ' + pselect)
 
       if ( pselect == biff) {
-          $('<img  class="img-rounded" class="pics" src="assests/img/biff2.png">').appendTo($('#selected'));
+          $('<img  class="img-rounded" class="pics" src="assests/img/biff2.png"><hr>').appendTo($('#selected'));
           $('#life').text('LIFE \.' + bifflife);
           // VS players
           $('<img  class="img-rounded" class="pics" src="assests/img/doc4.png">').appendTo($('#vs'));
@@ -108,29 +67,24 @@ var mcflyhp = hitp[3];
           $('#life').fadeIn();
           $('.fight', ).slideDown(2000); 
     });
-  });
+  }); 
 
     // FIGHT BTN create points for each player ...
     $('.fight').click (function() {
 
 var lifebtn = $('#life');
-    
+var fighbtn = 0;
+
     lifebtn.addClass('value');
     lifebtn.attr('value', 300)
 
+// CREATE RANDOM HP ... to add on each
 var hrandom = Math.floor((Math.random() * 20) + 1);   
 
       $('.life').html()
 
-console.log(lifebtn)
+console.log(this)
   });
-
-  });
-
-  
-  
-   
-
 
 
 

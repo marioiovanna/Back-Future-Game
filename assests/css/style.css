@@ -7,13 +7,21 @@ body {
 /* MAIN */
 .bt1 {
     background-color: transparent;
-    border: none 0px;
+    border: none;
     margin-left: 35%;
 }
 
+.lifeplayer,
+.lifevs {
+    font-weight: bold;
+    font-family: Comic Sans MS;
+    font-size: 30px;
+    color: #DAA520;
+    text-shadow: 3px 3px #000000;
+}
+
 .selecttext,
-.choosevs,
-.fight {
+.choosevs {
     background-color: transparent;
     border: none;
     display: none;
@@ -22,6 +30,22 @@ body {
     font-size: 30px;
     color: #DAA520;
     text-shadow: 3px 2px #000000;
+}
+
+.fight {
+    display: none;
+    margin-top: 300px;
+    background-color: transparent;
+    border: none;
+}
+
+.fight:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+}
+
+.fightimg {
+    width: 350px;
 }
 
 .selected {

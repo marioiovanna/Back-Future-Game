@@ -41,29 +41,24 @@
 
 <!-- LEFT BAR -->
 <div class="col-sm-3 sidenav">
-    <div id="life">
-    </div>
-
-    <div class="biff">
-        <button class="pside biffbtn" value="biff"><p class="hiddentext">Biff</p></button>
-    </div>
     <br>
+
+    <div class="biffbtn">
+        <button class="pside biff" value="biff"><p class="hiddentext">Biff</p></button>
+    </div>
 
     <div class="doc">
         <button class="pside docbtn" value="doc"><p class="hiddentext">Doc</p></button>
     </div>
-    <br>
 
     <div class="martin">
-        <button class="pside martinbtn" value=2><p class="hiddentext">Martin</p></button>
+        <button class="pside martinbtn" value="martin"><p class="hiddentext">Martin</p></button>
     </div>
-    <br>
 
     <div class="mcfly">
-        <button class="pside mcflybtn" value=3><p class="hiddentext">Mc Fly</p></button>
+        <button class="pside mcflybtn" value="mcfly"><p class="hiddentext">Mc Fly</p></button>
     </div>
 
-    <br>
 </div>
 
 <!-- MAIN -->
@@ -75,32 +70,34 @@
         <div class="select">
             <h1 class="selecttext">Select Player</h1>
         </div>
+        <div class="lifeplayer"></div>
+
     </div>
 
-
     <div class="col-md-4 text-center">
+
+        <h2 class="choosevs"></h2>
+
         <button class="bt1">
             <img src="assests/img/icon.png">
         </button>
 
-        <h2 class="choosevs"></h2>
-
         <button class="fight">
-            <img class="fight" src="assests/img/fight.png">
+            <img class="fightimg" src="assests/img/fight.png">
         </button>
-    </div>
 
+    </div>
 
     <div class="col-md-4">
         <div class="vs">
         </div>
+        <div class="lifevs"></div>
     </div>
 
 </div>
 
 <!-- RIGHT BAR -->
 <div class="col-sm-2 sidenav text-center">
-
     <div class="music-player">
         <span class="pmusic">MUSIC</span>
         <audio controls autoplay id="music">

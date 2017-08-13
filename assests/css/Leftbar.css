@@ -6,9 +6,10 @@
     border-style: inset;
     height: 220px;
     width: 260px;
+    margin-bottom: 10px;
 }
 
-.biffbtn {
+.biff {
     background-image: url("../img/biff2.png");
 }
 

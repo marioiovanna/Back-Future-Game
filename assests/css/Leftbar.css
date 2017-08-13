@@ -25,6 +25,11 @@
     background-image: url("../img/mcfly.png");
 }
 
+.deadbtn {
+    display: none;
+    background-image: url("../img/lapida.jpg");
+}
+
 .hiddentext {
     display: none;
     color: orange;

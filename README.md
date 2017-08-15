@@ -20,6 +20,7 @@ On hover on the imagesyou will be able to see the names of the caracthers.
 
 After choosing your **Player** you will need to choose the **VS player**.
 ![alt text](https://github.com/marioiovanna/Back-Future-Game/blob/master/assests/img/game-pics/caract3.PNG)
+#
 
 ### Game 
 Once you chooose both, the fight button will appear ... and ready **fight**.

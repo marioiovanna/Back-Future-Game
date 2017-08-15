@@ -1,6 +1,6 @@
 # Back to the Future - RPG Game
 
-### Rpg game based on Back to the future characters. Easy and simple to play. Where each characters has an uniq Life and Hitp.
+### Rpg game based on *Back to the Future* characters. Easy and simple to play. Where each characters has an uniq Life and Hitp.
 
 ![alt text](https://github.com/marioiovanna/Back-Future-Game/blob/master/assests/img/game-pics/main.PNG "Main")
 

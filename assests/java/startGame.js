@@ -124,12 +124,14 @@ function fight() {
                 // action after fade out bonus ...
                 $('.bonus').fadeOut(5000);
                 $('.lifeplayer').fadeOut(5000, function () {
-                    $('.lifeplayer').css('color', '#DAA520').css('font-size', '50px');
+                    $('.lifeplayer').css('color', '#DAA520').css('font-size', '50px').show().html('LIFE: ' + players[playerValue].life);
                     $('.vs').empty();
-                    $('.lifeplayer').show().html('LIFE: ' + players[playerValue].life);
+                    $('.choosevs').html('Select VS')
+
+
 
                     $('.vsselector').attr('disabled', false);
-                    $('.dead').append('<button class="pside deadbtn" value="R.I.P."><p class="hiddentext">R.I.P..</p></button>');
+                    $('.dead').append('<button class="pside deadbtn" value="R.I.P."><p class="hiddentext">R.I.P.</p></button>');
                 });
                 players[playerValue].hitp = 10;
                 end++;

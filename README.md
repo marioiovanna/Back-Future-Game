@@ -34,7 +34,6 @@ Every time you press on the **FIGHT button** the life of each player will drop. 
                 players[playerValue].life -= players[vsValue].hitp;
                 $('.lifeplayer').html('LIFE: ' + players[playerValue].life);
                 players[playerValue].hitp += Math.floor((Math.random() * 10) + 1);
-                console.log('player ' + players[playerValue].hitp);
 
         // math for vs player, add extra hit p
                 players[vsValue].life -= players[playerValue].hitp;

@@ -17,7 +17,6 @@
     <link rel="stylesheet" type="text/css" href="assests/css/Footer.css">
 
     <!-- Javascript FILES-->
-    <!--<script src=assests/java/javasc.js></script>-->
     <script src=assests/java/carAnimation.js></script>
     <script src=assests/java/startGame.js></script>
 
@@ -44,19 +43,19 @@
     <br>
 
     <div class="biffbtn">
-        <button class="pside biff" value="biff"><p class="hiddentext">Biff</p></button>
+        <button  class="pside biff vsselector" value='0'><p class="hiddentext">Biff</p></button>
     </div>
 
     <div class="doc">
-        <button class="pside docbtn" value="doc"><p class="hiddentext">Doc</p></button>
+        <button class="pside docbtn vsselector" value="1"><p class="hiddentext">Doc</p></button>
     </div>
 
     <div class="martin">
-        <button class="pside martinbtn" value="martin"><p class="hiddentext">Martin</p></button>
+        <button class="pside martinbtn vsselector" value="2"><p class="hiddentext">Martin</p></button>
     </div>
 
     <div class="mcfly">
-        <button class="pside mcflybtn" value="mcfly"><p class="hiddentext">Mc Fly</p></button>
+        <button class="pside mcflybtn vsselector" value="3"><p class="hiddentext">Mc Fly</p></button>
     </div>
 
     <div class="dead">
@@ -66,7 +65,7 @@
 </div>
 
 <!-- MAIN -->
-<div class="col-md-7 main">
+<div class="col-md-7 main text-center">
     <br>
     <br>
 
@@ -110,6 +109,8 @@
         <audio controls autoplay id="music">
             <source src="assests/sounds/music.ogg" type="audio/ogg">
         </audio>
+        <div class="reset">
+        </div>
     </div>
 </div>
 

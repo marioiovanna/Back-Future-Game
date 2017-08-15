@@ -1,5 +1,6 @@
 /* RIGHT BAR */
-.pmusic {
+.pmusic,
+.resetlabel {
     font-weight: bold;
     font-family: "Roboto Condensed";
     color: #DAA520;
@@ -9,3 +10,18 @@
 #music {
     width: 200px;
 }
+
+.resetbtn {
+    height: 200px;
+    width: 200px;
+    background-image: url(../img/icon2.png);
+    background-size: cover;
+    background-color: transparent;
+    border-style: none;
+}
+
+.resetbtn:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(15px);
+}
+

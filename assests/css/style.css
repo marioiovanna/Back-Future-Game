@@ -1,6 +1,6 @@
 body {
     background-image: url(../img/back4.png);
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -58,7 +58,20 @@ body {
     width: 300px;
     border: 1px solid green;
 }
-    
 
+.gameover {
+    font-size: 100px;
+    font-weight: bold;
+    color: darkorange;
+    margin-top: 350px;
+    text-shadow: 2px 3px #0f0f0f;
+    font-family: 'Roboto Slab', serif;
+}
+
+.label {
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto Slab', serif;
+}
 
 

@@ -1,147 +1,166 @@
 var players = [
     {
         name: 'biff',
+        value: '0',
         life: 300,
         hitp: 10
     },
     {
         name: 'doc',
+        value: '1',
         life: 250,
         hitp: 10
     },
     {
         name: 'martin',
+        value: '2',
         life: 300,
         hitp: 10
     },
     {
         name: 'mcfly',
+        value: '3',
         life: 240,
         hitp: 10
     }];
 
-var playerchoose = [];
-var playervs = [];
-
 var selected = false;
-
 var fightnow = false;
-var fights = 0;
+
+var playerValue = 0;
+var vsValue = 0;
+
+var end = 0;
+var rip = 'R.I.P' + players[vsValue].name;
 
 function startgame() {
 
     $('.bonus').hide();
-
     // START GAME press button trigger this ...
     $('.bt1').click(function ready() {
         $('.selecttext').fadeIn(3000);
         $('.bt1').fadeOut(400);
 
-        playerselector();
-    })
+        // playerselector();
+        $('.pside').on('click', this, function () {
+
+            if (selected === false) {
+
+                playerValue = this.value;
+                console.log(playerValue);
+                console.log('ORIGINAL HITP ' + players[playerValue].hitp);
+
+                $(this).appendTo('.select');
+                $(this).removeClass('vsselector');
+                $(this).attr('disabled', true);
+
+                $('.selecttext').hide();
+                $('.lifeplayer').html('LIFE: ' + players[playerValue].life);
+                $('.choosevs').html('Choose VS').show();
+
+                selected = true;
+            }
+
+            // VS player select
+            else if (selected === true) {
+
+                vsValue = this.value;
+                console.log(vsValue);
+
+                $(this).appendTo('.vs');
+                $('.choosevs').html('VS');
+                $('.pside').attr('disabled', true);
+                $('.lifevs').show();
+                $('.lifevs').html('LIFE: ' + players[vsValue].life);
+
+                $('.fight').fadeIn(3000);
+
+                fightnow = true;
+            }
+        })
+    });
+    // call function fight ...
+    fight();
 }
 
 function fight() {
-    if (fightnow === true) {
-        $('.fight').on('click', function () {
+    // start trigger action fight ...
+    $('.fight').on('click', function () {
 
-            playerchoose[0].life -= playervs[0].hitp;
-            $('.lifeplayer').html('LIFE: ' + playerchoose[0].life);
-            playerchoose[0].hitp += Math.floor((Math.random() * 10) + 1);
+        if (fightnow === true) {
 
-            playervs[0].life -= playerchoose[0].hitp;
-            $('.lifevs').html('LIFE: ' + playervs[0].life);
-            playervs[0].hitp += Math.floor((Math.random() * 10) + 1);
+            var randomLife =  Math.floor((Math.random() * 100) + 100);
 
-            console.log('Mi HITP normal = ' + playerchoose[0].hitp)
+            // if (players[playerValue].life >= players[vsValue].hitp) {
+                // math for life player, add extra hit points
+                players[playerValue].life -= players[vsValue].hitp;
+                $('.lifeplayer').html('LIFE: ' + players[playerValue].life);
+                players[playerValue].hitp += Math.floor((Math.random() * 10) + 1);
+                console.log('player ' + players[playerValue].hitp);
+            // }
 
-            if (playervs[0].life <= -1) {
+                // math for vs player, add extra hit p
+                players[vsValue].life -= players[playerValue].hitp;
+                $('.lifevs').html('LIFE: ' + players[vsValue].life);
+                players[vsValue].hitp += Math.floor((Math.random() * 10) + 1);
+                console.log('vs ' + players[vsValue].hitp);
+
+                console.log('');
+
+
+            // if VS player dies ...
+            if (players[vsValue].life <= 0) {
                 $('.fight').hide();
                 $('.lifevs').hide();
                 $('.vs').empty();
                 $('.deadbtn').css('display', 'block').appendTo('.vs');
                 $('.bonus').show();
-                playerchoose[0].life += 100;
-                $('.lifeplayer').html('+100').css('color', 'green').css('font-size', '100px');
+                players[playerValue].life += randomLife;
 
+                console.log('tiene q ser ' + randomLife)
+
+                $('.lifeplayer').html(randomLife).css('color', 'green').css('font-size', '100px');
+
+                // action after fade out bonus ...
                 $('.bonus').fadeOut(5000);
                 $('.lifeplayer').fadeOut(5000, function () {
-                    $('.lifeplayer').html('+100').css('color', '#DAA520').css('font-size', '50px');
+                    $('.lifeplayer').css('color', '#DAA520').css('font-size', '50px');
                     $('.vs').empty();
-                    $('.lifeplayer').show().html('LIFE: ' + playerchoose[0].life);
+                    $('.lifeplayer').show().html('LIFE: ' + players[playerValue].life);
+
+                    $('.vsselector').attr('disabled', false);
+                    $('.dead').append('<button class="pside deadbtn" value="R.I.P."><p class="hiddentext">R.I.P..</p></button>');
                 });
-
-                fights++;
-
-
-
-                console.log(fights)
-                console.log(selected)
-
+                players[playerValue].hitp = 10;
+                end++;
             }
-        })
-    }
+        }
+        endgame();
+    })
 }
 
-function vsselector() {
+function endgame() {
+    // finish game if all dead
+    if (end === 3) {
+        $('.main').html('<p class="gameover">GAME OVER</p>' + '<p class="label">Go back to the future</p>');
 
-    if (fights >= 1) {
-        $('.pside').attr('disabled', false);
-    }
-
-    if (selected === true) {
-        // Select Vs
-        $('.pside').on('click', this, function () {
-
-            for (var i = 0; i < players.length; i++) {
-
-                if (players[i].name === this.value) {
-                    playervs.unshift(players[i]);
-                    $(this).appendTo('.vs');
-                    $('.choosevs').html('VS');
-                    $('.pside').attr('disabled', true);
-                    $('.lifevs').show();
-                    $('.lifeplayer').show().html('LIFE: ' + playerchoose[0].life);
-                    $('.lifevs').html('LIFE: ' + playervs[0].life);
-
-                    $('.fight').fadeIn(3000);
-
-                    console.log(playervs[0])
-
-                    fightnow = true;
-                    fight();
-                }
-            }
+        $('body').css('background-image', 'url(assests/img/back.png' +
+            ')');
+        $('.reset').append('<button class="resetbtn">RESET GAME</button>').append('<label class="resetlabel">RESET GAME</label>');
+        $('.resetbtn').on('click', function () {
+            location.reload();
         })
     }
-}
-
-function playerselector() {
-    if (selected === false) {
-        // Select player
-        $('.pside').on('click', this, function () {
-
-            for (var i = 0; i < players.length; i++) {
-
-                if (players[i].name === this.value) {
-
-                    playerchoose.push(players[i]);
-                    $(this).appendTo('.select');
-                    $(this).attr('disabled', true);
-                    $('.selecttext').hide();
-                    $('.lifeplayer').html('LIFE: ' + playerchoose[0].life);
-
-                    $('.choosevs').html('Choose VS').show();
-                    selected = true;
-
-                    vsselector()
-                }
-
-            }
+    else if (players[playerValue].life <= 0 ) {
+        $('.main').html('<p class="gameover">GAME OVER</p>' + '<p class="label">YOU LOOSE</p>');        $('body').css('background-image', 'url(assests/img/back.png' +
+            ')');
+        $('.reset').append('<button class="resetbtn">RESET GAME</button>').append('<label class="resetlabel">RESET GAME</label>');
+        $('.resetbtn').on('click', function () {
+            location.reload();
         })
     }
 }
 
 $(document).ready(function () {
-    startgame()
+    startgame();
 });

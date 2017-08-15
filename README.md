@@ -26,7 +26,7 @@ After choosing your **Player** you will need to choose the **VS player**.
 Once you chooose both, the fight button will appear ... and ready **fight**.
 ![alt text](https://github.com/marioiovanna/Back-Future-Game/blob/master/assests/img/game-pics/game.PNG)
 
-Every time you press on the **FIGHT button** the life of each player will drop. Thats because each player has an uniq **HIT POWER**  that change on every sigle press ...
+Every time you press on the **FIGHT button** the life of each player will drop. Thats because each player has an uniq **HIT POWER**  that change on every single click ...
 ![alt text](https://github.com/marioiovanna/Back-Future-Game/blob/master/assests/img/game-pics/game2.PNG)
 
 ```javascript

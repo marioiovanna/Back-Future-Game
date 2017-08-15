@@ -8,7 +8,7 @@ var players = [
     {
         name: 'doc',
         value: '1',
-        life: 250,
+        life: 260,
         hitp: 10
     },
     {
@@ -127,8 +127,6 @@ function fight() {
                     $('.lifeplayer').css('color', '#DAA520').css('font-size', '50px').show().html('LIFE: ' + players[playerValue].life);
                     $('.vs').empty();
                     $('.choosevs').html('Select VS')
-
-
 
                     $('.vsselector').attr('disabled', false);
                     $('.dead').append('<button class="pside deadbtn" value="R.I.P."><p class="hiddentext">R.I.P.</p></button>');
